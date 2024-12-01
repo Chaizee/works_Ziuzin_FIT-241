@@ -58,7 +58,6 @@ class forms
                             formpoln22 == det || RotateDetailMatch(formpoln22, det))
                         {
                             pairs.Add(Tuple.Create(j - n, k - n));
-                            //Console.WriteLine((j - n) + " " + (k - n));
                         }
                     }
                     else if (formtop1 == formrot2.Substring(0, 5) && formlower1 == formrot2.Substring(10, 5))
@@ -69,7 +68,6 @@ class forms
                         if (formpoln1 == det || RotateDetailMatch(formpoln1, det) || formpoln2 == det || RotateDetailMatch(formpoln2, det))
                         {
                             pairs.Add(Tuple.Create(j - n, k - n));
-                            //Console.WriteLine((j - n) + " " + (k - n));
                         }
                     }
                 }
@@ -132,6 +130,7 @@ class forms
         //}
         //else {  Console.WriteLine("false"); }
         //}
+        
         foreach (var pair in pairs)
         {
             Console.WriteLine($"{pair.Item1} {pair.Item2}");
