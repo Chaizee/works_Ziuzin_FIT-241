@@ -1,4 +1,4 @@
-﻿public class Animal
+public class Animal
 {
     public string Name { get; set; }
 
@@ -40,10 +40,9 @@ public class Mammal : Animal
 
     public override string ToString()
     {
-        return $"Наименование: {Name}, место обитания: {Habitat}, вес: {Weight}";
+        return $"Наименование: {Name}, Место обитания: {Habitat}, Вес: {Weight}";
     }
 }
-
 
 class Program
 {
@@ -57,11 +56,11 @@ class Program
         {
             Console.WriteLine($"Введите данные для птицы {i + 1}:");
             Console.Write("Наименование: ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine().ToLower();
             Console.Write("Обитание: ");
-            string habitat = Console.ReadLine();
+            string habitat = Console.ReadLine().ToLower();
             Console.Write("Место зимовки: ");
-            string migrationDestination = Console.ReadLine();
+            string migrationDestination = Console.ReadLine().ToLower();
             birds[i] = new Bird(name, habitat, migrationDestination);
         }
 
@@ -73,9 +72,9 @@ class Program
         {
             Console.WriteLine($"Введите данные для млекопитающего {i + 1}:");
             Console.Write("Наименование: ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine().ToLower();
             Console.Write("Обитание: ");
-            string habitat = Console.ReadLine();
+            string habitat = Console.ReadLine().ToLower();
             Console.Write("Вес: ");
             double weight = double.Parse(Console.ReadLine());
             mammals[i] = new Mammal(name, habitat, weight);
@@ -95,7 +94,7 @@ class Program
             {
                 case 1:
                     Console.Write("Введите место обитания: ");
-                    string habitat = Console.ReadLine();
+                    string habitat = Console.ReadLine().ToLower();
 
                     Console.WriteLine("Птицы:");
                     foreach (var bird in birds)
@@ -118,7 +117,7 @@ class Program
 
                 case 2:
                     Console.Write("Введите место зимовки: ");
-                    string migrationDestination = Console.ReadLine();
+                    string migrationDestination = Console.ReadLine().ToLower();
 
                     Console.WriteLine("Птицы:");
                     foreach (var bird in birds)
@@ -131,13 +130,13 @@ class Program
                     break;
 
                 case 3:
-                    Console.Write("Введите минимальный вес: ");
-                    double minWeight = double.Parse(Console.ReadLine());
+                    Console.Write("Введите вес: ");
+                    double specificWeight = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("Млекопитающие:");
                     foreach (var mammal in mammals)
                     {
-                        if (mammal.Weight >= minWeight)
+                        if (mammal.Weight == specificWeight)
                         {
                             Console.WriteLine(mammal);
                         }
