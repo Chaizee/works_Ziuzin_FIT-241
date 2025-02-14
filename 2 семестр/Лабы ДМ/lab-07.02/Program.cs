@@ -110,23 +110,27 @@ class Program
             listt.Add(Enumerable.Min(temp));
 
         }
-
-        for (int i = 1; i < listt.Count; i++)
+        for (int f = 0; f < n; f++)
         {
-            for (int j = 0; j < i; j++)
+            for (int i = 1; i < listt.Count; i++)
             {
-                if (listt[i] < listt[j])
+                for (int j = 0; j < i; j++)
                 {
-
-                    if (graf[i, j] == 1)
+                    if (listt[i] < listt[j])
                     {
-                        listt[j] = listt[i];
-                    }
 
+                        if (graf[i, j] == 1)
+                        {
+                            listt[j] = listt[i];
+                        }
+
+                    }
                 }
             }
         }
-        
-        Console.WriteLine($"Граф имеет {Enumerable.Max(listt)} компонент связанностей");
+        HashSet<int> hah = new HashSet<int>(listt);
+        listt = hah.ToList();
+
+        Console.WriteLine($"Граф имеет {listt.Count} компонент связанностей");
     }
 }
