@@ -1,4 +1,4 @@
-﻿namespace abonentss
+namespace abonentss
 {
     class Abonent
     {
@@ -62,7 +62,9 @@
     {
         static void Main(string[] args)
         {
-            Abonent[] abonents = new Abonent[2];
+            Console.WriteLine("Введите количество абонентов");
+            int AbonentsArrayCount = int.Parse(Console.ReadLine());
+            Abonent[] abonents = new Abonent[AbonentsArrayCount];
             int AbonentsCount = 0;
             while (true)
             {
