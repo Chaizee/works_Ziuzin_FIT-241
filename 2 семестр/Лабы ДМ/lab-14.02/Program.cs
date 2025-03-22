@@ -1,4 +1,5 @@
-﻿class AlgByPrima
+//Прима
+class AlgByPrima
 {
     static void Main(string[] args)
     {
@@ -56,6 +57,8 @@ class EdgeWeihgtList
         EndVertices = endvertices;
     }
 }
+
+//Крускала
 
 class AlgByKruskal
 {
