@@ -44,6 +44,8 @@ class AlgByPrima
     }
 }
 
+//Крускала
+
 class EdgeWeihgtList
 {
     public int Weight { get; set; }
@@ -57,8 +59,6 @@ class EdgeWeihgtList
         EndVertices = endvertices;
     }
 }
-
-//Крускала
 
 class AlgByKruskal
 {
