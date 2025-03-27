@@ -44,7 +44,7 @@ class AlgByPrima
     }
 }
 
-//Крускала
+//Краскала
 
 class EdgeWeihgtList
 {
