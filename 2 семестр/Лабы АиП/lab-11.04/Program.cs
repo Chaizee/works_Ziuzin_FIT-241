@@ -2,7 +2,7 @@
 // дата выдачи, дата возврата. 
 // Необходимо выдать книги, которые ни разу не выдавались, и выдать книги, которые не возвращены
 
-class LibraryTransaction // Дата в виде ДД.ММ.ГГ
+class LibraryTransaction
 {
     public string issueDate { get; set; }
     public string returnDate { get; set; }
